@@ -1,0 +1,37 @@
+/*
+* hw4_pcode.txt
+* Author: Clayton Brown
+* Date: Feb 15, 2023
+*
+* COSC 3750, Homework 4
+*
+* This is the pseudocode for wycat.c. In this file, the
+* basic operations of the code are outlined in a simple
+* and easy to understand way.
+*
+*/
+
+
+Begin main (have my argc and argv variables initialized)
+Declare and initialize my variables
+If argc has one argument, then:
+  Take input from the user using stdin
+  Once CTRL+D is hit, print out the inputted text using stdout
+  Check to make sure no error occured
+Else:
+  Begin a for loop that goes through all entries in argv
+    If the current entry is a dash:
+      Get input from the user using stdin
+      Print out input using stdout
+      Check to make sure no errors occured
+    Else:
+      Attempt to open the file using fopen
+      If the file does not exist:
+        Tell the user and then move onto the next file
+      Else:
+        Read in from the file
+        Make sure the text was read in correctly using stderr
+        Close the file
+        Ensure file successfully closed
+        Print the output from the file
+        Make sure that no errors occured
